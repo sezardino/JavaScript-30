@@ -1,8 +1,3 @@
-// Get your shorts on - this is an array workout!
-// ## Array Cardio Day 1
-
-// Some data we can work with
-
 const inventors = [
   {first: 'Albert', last: 'Einstein', year: 1879, passed: 1955},
   {first: 'Isaac', last: 'Newton', year: 1643, passed: 1727},
@@ -64,17 +59,85 @@ const people = [
 
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
+const investorsFilter = () => {
+  const data = inventors.filter((item) => {
+    if (item.year < 1600 && item.year >= 1500) {
+      return item;
+    }
+  });
+
+  return data;
+};
+
+console.log(investorsFilter());
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
+const investorsMap = () => {
+  const data = inventors.map((item) => {
+    const {first, last} = item;
+    return {first, last};
+  });
+
+  return data;
+};
+
+console.log(investorsMap());
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
+const investorsSort1 = () => {
+  const data = inventors.sort((itemA, itemB) => {
+    if (itemA.year < itemB.year) {
+      return -1;
+    }
+    if (itemA.year > itemB.year) {
+      return 1;
+    }
+    if (itemA.year === itemB.year) {
+      return 0;
+    }
+  });
+
+  return data;
+};
+
+console.log(investorsSort1());
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
+const investorsReduce = () => {
+  const data = inventors.reduce((number, currentValue) => {
+    const {year, passed} = currentValue;
+    const currentYears = passed - year;
+    return number + currentYears;
+  }, 0);
+
+  return data;
+};
+
+console.log(investorsReduce());
 
 // 5. Sort the inventors by years lived
+const investorsSort2 = () => {
+  const data = inventors.sort((itemA, itemB) => {
+    const yearsA = itemA.passed - itemA.year;
+    const yearsB = itemB.passed - itemB.year;
+    if (yearsA < yearsB) {
+      return -1;
+    }
+    if (yearsA > yearsA.B) {
+      return 1;
+    }
+    if (yearsA === yearsB) {
+      return 0;
+    }
+  });
+
+  return data;
+};
+
+console.log(investorsSort2());
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -100,3 +163,11 @@ const data = [
   'car',
   'truck',
 ];
+
+const dataReduce = () => {
+  const string = data.reduce((a, item) => a + item + ' ', '');
+
+  return string;
+};
+
+console.log(dataReduce());
