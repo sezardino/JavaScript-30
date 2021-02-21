@@ -1,14 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript 30 course</title>
-  <link rel="stylesheet" href="./styles/style.css">
-  <script src="./scripts/index.js" defer></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript 30 course</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./scripts/index.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>
+        JavaScript 30 <br />
+        Day 1: Drum Kit
+      </h1>
+      <section class="container">
+        <ul class="keys">
+          <li class="keys__item">
+            <button data-key="a" class="keys__button js-key">
+              <span class="keys__label js-label">a</span>
+              <span class="keys__info">clap</span>
+            </button>
+          </li>
+          <li class="keys__item">
+            <button data-key="s" class="keys__button js-key">
+              <span class="keys__label js-label">s</span>
+              <span class="keys__info">hihat</span>
+            </button>
+          </li>
+          <li class="keys__item">
+            <button data-key="d" class="keys__button js-key">
+              <span class="keys__label js-label">d</span>
+              <span class="keys__info">kick</span>
+            </button>
+          </li>
+          <li class="keys__item">
+            <button data-key="f" class="keys__button js-key">
+              <span class="keys__label js-label">f</span>
+              <span class="keys__info">openhat</span>
+            </button>
+          </li>
+          <li class="keys__item">
+            <button data-key="g" class="keys__button js-key">
+              <span class="keys__label js-label">g</span>
+              <span class="keys__info">boom</span>
+            </button>
+          </li>
+          <li class="keys__item">
+            <button data-key="h" class="keys__button js-key">
+              <span class="keys__label js-label">h</span>
+              <span class="keys__info">ride</span>
+            </button>
+          </li>
+          <li class="keys__item">
+            <button data-key="j" class="keys__button js-key">
+              <span class="keys__label js-label">j</span>
+              <span class="keys__info">snare</span>
+            </button>
+          </li>
+          <li class="keys__item">
+            <button data-key="k" class="keys__button js-key">
+              <span class="keys__label js-label">k</span>
+              <span class="keys__info">top</span>
+            </button>
+          </li>
+          <li class="keys__item">
+            <button data-key="l" class="keys__button js-key">
+              <span class="keys__label js-label">l</span>
+              <span class="keys__info">tink</span>
+            </button>
+          </li>
+        </ul>
+      </section>
+    </main>
 
-</body>
+    <audio data-key="a" class="js-audio" src="sounds/clap.wav"></audio>
+    <audio data-key="s" class="js-audio" src="sounds/hihat.wav"></audio>
+    <audio data-key="d" class="js-audio" src="sounds/kick.wav"></audio>
+    <audio data-key="f" class="js-audio" src="sounds/openhat.wav"></audio>
+    <audio data-key="g" class="js-audio" src="sounds/boom.wav"></audio>
+    <audio data-key="h" class="js-audio" src="sounds/ride.wav"></audio>
+    <audio data-key="j" class="js-audio" src="sounds/snare.wav"></audio>
+    <audio data-key="k" class="js-audio" src="sounds/tom.wav"></audio>
+    <audio data-key="l" class="js-audio" src="sounds/tink.wav"></audio>
+
+  </body>
 </html>
